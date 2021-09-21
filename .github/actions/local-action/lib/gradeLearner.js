@@ -1,14 +1,19 @@
-const github = require("@actions/github");
-const core = require("@actions/core");
+const fs = require("fs");
+const yaml = require("js-yaml");
+const arrayCompare = require("./arrayCompare");
 
 module.exports = async () => {
-  const token = core.getInput("token");
-  const octokit = github.getOctokit(token);
+  const answerArray = ["dist/*.js", "**/docs/**"];
+  const secretScanningFile = fs.readFileSync(
+    `${process.env.GITHUB_WORKSPACE}/.github/secret_scanning.yml`,
+    "utf8"
+  );
+  const parsedSecretScanning = yaml.load(secretScanningFile);
 
   try {
     //   Do some logic to verify the leaner understands
 
-    if (GOOD - RESULT) {
+    if (arrayCompare(answerArray, parsedSecretScanning["paths-ignore"])) {
       return {
         reports: [
           {
@@ -35,8 +40,8 @@ module.exports = async () => {
             level: "warning",
             msg: `incorrect solution`,
             error: {
-              expected: "What we expecrted",
-              got: `What we got`,
+              expected: `secret-scanning.yml to match the following patterns: ${answerArray}`,
+              got: `${parsedSecretScanning["paths-ignore"]}`,
             },
           },
         ],
@@ -53,7 +58,7 @@ module.exports = async () => {
           msg: "",
           error: {
             expected: "",
-            got: "An internal error occurred.  Please open an issue at: https://github.com/githubtraining/exercise-remove-commit-history and let us know!  Thank you",
+            got: "An internal error occurred.  Please open an issue at: https://github.com/githubtraining/exercise-exclude-files-from-secret-scanning and let us know!  Thank you",
           },
         },
       ],
