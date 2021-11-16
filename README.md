@@ -62,8 +62,6 @@ Resources for working with exercises and GitHub Actions in general:
 
 Your exercise is graded automatically once you have completed the instructions. To see the result of your exercise, go to the **Actions** tab, and see the most recent run on the **Grading** workflow.
 
-![](https://user-images.githubusercontent.com/40564413/142004941-f683e8e5-15ff-4c63-95d2-c150321ee926.png)
-
 See [Viewing workflow run history](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/viewing-workflow-run-history) if you need assistance.
 
 ## Troubleshooting
