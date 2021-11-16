@@ -38,8 +38,8 @@ Please complete the instructions below:
 1. Create your own copy of this repository by using the [Use this template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template) button.
 
 2. Create the necessary file in the repository to exclude the following files from being scanned:
-  - Any file in a `docs` directory anywhere in the repository.
-  - All `js` files in a `dist` folder at the root of the repository.
+   - Any file in a `docs` directory anywhere in the repository.
+   - All `js` files in a `dist` folder at the root of the repository.
 
 ## Useful resources
 
