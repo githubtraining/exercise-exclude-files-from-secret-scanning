@@ -1,6 +1,6 @@
-# Welcome to the exclude-files-from-secret-scanning exercise!
+# Welcome to the Exclude files from secret scanning exercise!
 
-This exercise checks FILL THIS IN. It is automatically graded via a workflow once you have completed the instructions.
+This exercise checks your knowledge on excluding files from being scanned by secret scanning. It is automatically graded via a workflow once you have completed the instructions.
 
 ## About this exercise
 
@@ -10,7 +10,7 @@ A grading script exists under `.github/workflows/grading.yml`. You do not need t
 
 <!-- REQUIRED for all exercises -->
 <details><summary>:information_source: About the use of GitHub Actions in this exercise</summary>
- 
+
 > This exercise utilizes [GitHub Actions](https://docs.github.com/en/actions), which is free for public repositories and self-hosted runners, but may incur charges on private repositories. See [About billing for GitHub Actions](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions) to learn more. The use of GitHub Actions also means that it may take the grading workflow a few seconds and sometimes minutes to run.
 </details>
 
@@ -37,29 +37,32 @@ Please complete the instructions below:
 
 1. Create your own copy of this repository by using the [Use this template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template) button.
 
-<!-- Add your steps below starting with step 2 -->
-
-**Configure secret scanning to ignore the following conditions**
-
-- Any files in a `docs` directory anywhere in the repository.
-- and `js` files in a `dist` folder at the root of the repo
+2. Create the necessary file in the repository to exclude the following files from being scanned:
+  - Any file in a `docs` directory anywhere in the repository.
+  - All `js` files in a `dist` folder at the root of the repository.
 
 ## Useful resources
 
-Use these resources specific to this exercise to help you!
+Use these to help you!
 
-<!-- - Add further resources for the learner in list form:
-- [Title](link)
- -->
+Resources specific to this exercise:
+
+- [Configuring secret scanning for your repositories](https://docs.github.com/en/code-security/secret-scanning/configuring-secret-scanning-for-your-repositories)
+- [Filter pattern cheat sheet](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet)
+
+Resources for working with exercises and GitHub Actions in general:
+
+- [Creating a repository from a template]( https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
+- [Viewing workflow run history](https://docs.github.com/en/actions/managing-workflow-runs/viewing-workflow-run-history)
+- [Running a workflow on GitHub](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow-on-github)
+- [About billing for GitHub Actions](https://docs.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-github-actions)
+- [GitHub Actions](https://docs.github.com/en/actions)
 
 ## Seeing your result
 
-Your exercise is graded automatically once you have completed the instructions. To see the result of your exercise, go to the **Actions** tab, and see the most recent run on the **Grading** workflow. <!-- specify expected Looking Glass display_type --><!-- specific place to look -->
+Your exercise is graded automatically once you have completed the instructions. To see the result of your exercise, go to the **Actions** tab, and see the most recent run on the **Grading** workflow.
 
-<!-- Display types:
-- actions
-- issues
- -->
+![](https://user-images.githubusercontent.com/40564413/141994177-364de749-de91-4ff5-8470-c35ff9dcb0f2.png)
 
 See [Viewing workflow run history](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/viewing-workflow-run-history) if you need assistance.
 
